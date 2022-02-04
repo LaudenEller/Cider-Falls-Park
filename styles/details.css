@@ -1,0 +1,14 @@
+/* add flexbox & display parameters to content within columns */
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* add flexbox and display parameters to both of the columns */
+.detail--column {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    padding: 1rem;
+    border: 1px dotted goldenrod;
+}

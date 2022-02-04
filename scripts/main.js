@@ -1,3 +1,34 @@
+const mainContainer = document.querySelector("#container")
+
+const HTMLString = `
+        <header class="header">
+            <h1>Cider Falls Park</h1>
+            <div><img src="pic_trulli.jpg" alt="Italian Trulli"></div>
+            </header>
+
+        <article class="parks">
+            <H2>Park Areas</H2>
+            <section class="parks container">
+            ${Parks}
+            </section>
+            </article>
+            
+            <article class="guests container">
+            <h2>Guests</h2>
+            <section class="guests info">
+            ${Guests}
+            </section>
+            </article>
+
+            <footer class="footer">
+            <div class="email">Info@ciderfallspark.com</div>
+            <div class="address">123 Cider Falls Way Cider Falls, CA 90049</div>
+            <div class="number">999-999-9999"</div>
+            </footer>
+    `
+
+mainContainer.innerHTML = HTMLString
+
 // What are the main resources (i.e. tables)? Design your ERD first.
     // Services, guests, parks
 
@@ -8,16 +39,16 @@
     // See ERD
 
 // Which modules should you create?
-    // Database, Main, Index, Styles, Parks, Services, Guests, 
+    // Database, Main, Index, Styles, Parks, Services, Guests,
 
 // What is the responsibility of each module?
     // Database is responsible for storing source data
     // Main is responsible for generating innerHTML
     // Index is responsible for rendering HTML from Main
     // Styles is responsible for setting CSS factors
-    // Parks is responsible for generating a copy of the current state of parks data
-    // Services is responsible for generating a copy of the current state of services data
-    // Guests is responsible for generating a copy of the current state of guests data
+    // Parks is responsible for building and exporting a copy of the current state of parks data, and displaying the services that are available in each park
+    // Services is responsible for building and exporting a copy of the current state of services data
+    // Guests is responsible for building and exporting a copy of the current state of guests data
 
 // What functions should be in which modules?
     // Database should export arrays for parks, services and guests
@@ -27,7 +58,7 @@
 
 // What is the responsibility of each function?
     // getFunctions each need to return an array of their target objects from database
-    // moduleFunctions are responsible for generating their HTML uls
+    // moduleFunctions are responsible for generating HTML representation of thier objectArrays
 
 // What should each function return?
     // getFunctions should return an array
